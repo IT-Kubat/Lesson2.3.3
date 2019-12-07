@@ -10,9 +10,9 @@ public class User {
 
     public void setName(String name) throws IllegalNameLengthException{
         if(name.length()>20){
-            this.name = name;
             throw new IllegalNameLengthException("Your name is out of limit: ");
         }
+        this.name = name;
 
     }
 
@@ -21,13 +21,10 @@ public class User {
     }
 
     public void setAge(int age) throws IllegalAgeException{
-        if (age > 1 && age <100){
-            this.age = age;
-
-        }else {
+        if (age > 100 || age <0){
             throw new IllegalAgeException("Your age is out of 1-100: ");
         }
-
+        this.age = age;
     }
     public void getInfo(){
         System.out.println("name:" + getName() + "\n" +

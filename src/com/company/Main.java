@@ -5,13 +5,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        User user = new User();
+
         while (true){
             try{
-        Scanner scanner = new Scanner(System.in);
+
+                System.out.println("Enter your name: ");
                 String name = scanner.nextLine();
-                User user = new User();
-                user.setName(name);
+                System.out.println("Enter your age:");
                 int age = scanner.nextInt();
+                scanner.nextLine();
+                user.setName(name);
                 user.setAge(age);
                 user.getInfo();
 
